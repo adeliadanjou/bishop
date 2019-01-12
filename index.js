@@ -1,4 +1,10 @@
 const app = require('./app');
+const Router = require('./controllers/items')
+
+
+
+app.use('/', Router)
+
 
 app
   .use('/items', require('./controllers/items'))
