@@ -27,12 +27,12 @@ let getById = function(req,res,next) {
      
       //pokemons:
 
-      if(req.params.id.length === 1){
+      if(req.params.id.length <=3){
         myImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${req.params.id}.png`
       }
 
      //drivers
-      else if(req.params.id.length < 20 && req.params.id.length !== 1 ){
+      else if(req.params.id.length < 20 && req.params.id.length <=3 ){
         myImage = `http://en.wikipedia.org/wiki/${nameArr[0]}_${nameArr[1]}`
       }
 
