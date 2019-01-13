@@ -32,7 +32,7 @@ let getById = function(req,res,next) {
       }
 
      //drivers
-      else if(req.params.id.length < 20 && req.params.id.length <=3 ){
+      else if(req.params.id.length < 20 && req.params.id.length >=3 ){
         myImage = `http://en.wikipedia.org/wiki/${nameArr[0]}_${nameArr[1]}`
       }
 
