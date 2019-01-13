@@ -3,7 +3,7 @@ const NewApi = require('../models/NewApi');
 let getItems = function(req,res,next) {
   
   NewApi.find({}, (error, myApiData) => {
-    console.log(myApiData)
+    
     if (error) {
       next(error);
     } else {
