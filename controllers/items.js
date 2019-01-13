@@ -1,12 +1,8 @@
 const {Router} = require('express');
 const NewApi = require('../models/NewApi');
-const {firstApiData,secondApiData,thirdApiData} = require('../myApi/myApi')
+const validation = require('../validation/validation')
 
-
-// firstApiData() 
-// secondApiData() 
-// thirdApiData();
-
+validation()
 
 module.exports = new Router()
   .get('/items', (req, res, next) => {
@@ -44,10 +40,6 @@ module.exports = new Router()
        
         let idLowerCase = clashId.toLowerCase()
 
-      
-        console.log(idLowerCase)
-
-        
        
         //pokemons:
 
@@ -72,8 +64,6 @@ module.exports = new Router()
         "name": myApiData.name,
     }
      
-
-
         res.status(200).json(paramsId);
       }
     });

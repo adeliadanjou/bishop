@@ -8,7 +8,7 @@ let firstApiData = () => {
     .then(apiData => {
      
       apiData.data.map(function (obj) {
-        console.log(obj.idName )
+        
         var id = obj._id;
         var name = obj.name;
 
@@ -18,12 +18,7 @@ let firstApiData = () => {
         });
 
         myNewApi.save()
-          .then(resp => {
-            console.log(`Api Clash: object with name ${obj.name} saved!!!`)
-          })
-          .catch(resp => {
-            console.log("Error saving, maybe you have already saved it?")
-          })
+        
       })
 
     })
@@ -47,12 +42,7 @@ let secondApiData = () => {
         });
 
         myNewApi.save()
-          .then(resp => {
-            console.log(`Api Pokemon: object with name ${name} saved!!!`)
-          })
-          .catch(resp => {
-            console.log("Error saving, maybe you have already saved it?")
-          })
+        
       }
 
     })
@@ -86,12 +76,7 @@ let thirdApiData = () => {
         });
 
         myNewApi.save()
-          .then(resp => {
-            console.log(`Api Drivers: object with name ${obj.GivenName} ${obj.FamilyName} saved!!!`)
-          })
-          .catch(resp => {
-            console.log("Error saving, maybe you have already saved it?")
-          })
+        
       })
 
     })
