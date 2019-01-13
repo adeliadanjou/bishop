@@ -6,9 +6,9 @@ const NewApi = require("../models/NewApi");
 let firstApiData = () => {
   axios.get(`http://www.clashapi.xyz/api/cards`)
     .then(apiData => {
-
+     
       apiData.data.map(function (obj) {
-
+        console.log(obj.idName )
         var id = obj._id;
         var name = obj.name;
 
